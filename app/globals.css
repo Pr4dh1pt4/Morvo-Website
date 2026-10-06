@@ -1,0 +1,136 @@
+:root {
+  --forest: #1b4332;
+  --brand: #0c9371;
+  --footer: #00533f;
+  --hero-green: #049356;
+  --teal: #2dd4bf;
+  --amber: #ff6b35;
+  --offwhite: #f7f5f0;
+  --charcoal: #1f2a24;
+  --slate: #6b7280;
+  --placeholder: #d9e2dc;
+  --white: #fff;
+
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --section-pad: clamp(24px, 6.667vw, 96px);
+  --content-max: 1248px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--offwhite);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.section {
+  padding: var(--section-pad);
+}
+
+.section__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background: var(--amber);
+  color: var(--white);
+}
+
+.btn--brand {
+  background: var(--brand);
+  color: var(--white);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn--outline-dark {
+  background: transparent;
+  border: 1.5px solid var(--forest);
+  color: var(--forest);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}

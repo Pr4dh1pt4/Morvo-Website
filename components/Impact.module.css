@@ -1,0 +1,44 @@
+.wrap {
+  background: var(--offwhite);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.title {
+  color: var(--charcoal);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px 64px;
+  margin: 0;
+}
+
+/* Angka tampil di atas label; urutan DOM tetap dt → dd. */
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.value {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--amber);
+}
+
+.label {
+  font-size: 13px;
+  color: var(--slate);
+}

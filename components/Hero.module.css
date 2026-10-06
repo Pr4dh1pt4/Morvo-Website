@@ -1,0 +1,153 @@
+.hero {
+  padding: 17px;
+  background: var(--white);
+}
+
+.card {
+  position: relative;
+  max-width: 1800px;
+  margin: 0 auto;
+  aspect-ratio: 1406 / 686;
+  overflow: hidden;
+  border-radius: 20px;
+  container-type: inline-size;
+  background: var(--hero-green) url('/images/hero-bg.png') center / cover no-repeat;
+}
+
+.content {
+  position: absolute;
+  z-index: 2;
+  left: 6.828%;
+  /* Frame "Hero Text" di Figma mulai di 21.65%, eyebrow-nya 31px lebih bawah (179.5/686). */
+  top: 26.17%;
+  width: 42.67%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--white);
+}
+
+.eyebrow {
+  color: var(--brand);
+  font-weight: 700;
+  font-size: clamp(11px, 0.925cqw, 16px);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(26px, 2.845cqw, 56px);
+  line-height: 1.25;
+  text-shadow: 0 4px 17px rgba(0, 0, 0, 0.5);
+}
+
+.lead {
+  font-size: clamp(13px, 1.138cqw, 20px);
+  line-height: 1.5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stage-inner {
+  position: absolute;
+  inset: 0;
+}
+
+/* Koordinat persen dari kanvas Figma 1406×686. Rotasi sudah ada di PNG. */
+.bottle {
+  position: absolute;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+}
+
+.bottle-1 {
+  left: 53.13%;
+  top: 11.95%;
+  width: 63.86%;
+  aspect-ratio: 897.93 / 897.93;
+}
+
+.bottle-3 {
+  left: 21.12%;
+  top: 17.49%;
+  width: 90.78%;
+  aspect-ratio: 1276.38 / 886.51;
+}
+
+.bottle-2 {
+  left: 38.9%;
+  top: 11.95%;
+  width: 73.85%;
+  aspect-ratio: 1038.4 / 849.14;
+}
+
+@media (max-width: 1099px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+  }
+
+  .content {
+    position: static;
+    width: auto;
+    padding: 56px 32px 24px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .stage {
+    position: relative;
+    inset: auto;
+    width: min(100%, 520px);
+    aspect-ratio: 562 / 549;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .stage-inner {
+    inset: auto;
+    left: -140%;
+    top: -25%;
+    width: 250%;
+    aspect-ratio: 1406 / 686;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 10px;
+  }
+
+  .content {
+    padding: 40px 20px 16px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,30 @@
+.wrap {
+  background: var(--brand);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  color: var(--white);
+}
+
+.contact {
+  font-size: 14px;
+  color: var(--offwhite);
+  text-align: center;
+  word-spacing: 2px;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
